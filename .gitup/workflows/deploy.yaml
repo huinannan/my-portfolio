@@ -19,11 +19,11 @@ jobs:
           node-version: '16.x'
 
       - name: Install
-        run: npm i pnpm -g && pnpm install # 安装依赖
+        run: npm install # 安装依赖
 
       - name: Build
         run: npm run build
-        
+
       - name: Copy
         run: cp README.md dist && cd dist && ls && cd ..
       - name: Deploy
